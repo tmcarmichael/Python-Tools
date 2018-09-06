@@ -1,13 +1,20 @@
+#Linux as root
+
 #!usr/bin/env python3
 import subprocess as sp
 import optparse as op
+#alt#import argparse as ap
 import re
 
 def get_args():
     cliparse = op.OptionParser()
+    #alt#cliparse = ap.ArgumentParser()
     cliparse.add_option("-i", "--interface", dest="interface", help="Network interface to switch MAC address")
+    #alt#cliparse.add_argument("-i", "--interface", dest="interface", help="Network interface to switch MAC address")
     cliparse.add_option("-m", "--MAC", dest="new_MAC", help="New MAC address")
+    #alt#cliparse.add_argument("-m", "--MAC", dest="new_MAC", help="New MAC address")
     (opts, args) = cliparse.parse_args()
+    #alt#opts = cliparse.parse_args()
     if not opts.interface:
         cliparse.error("Specify an interface, use --help for more information.")
     elif not opts.new_MAC:
