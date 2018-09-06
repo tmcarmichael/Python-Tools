@@ -1,7 +1,7 @@
 #!usr/bin/env python
 import subprocess as sp
 import optparse as op
-import re as
+import re
 
 def get_args():
     cliparse = op.OptionParser()
