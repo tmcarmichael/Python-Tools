@@ -1,5 +1,3 @@
-#Linux as root
-
 #!usr/bin/env python3
 import subprocess as sp
 import optparse as op
